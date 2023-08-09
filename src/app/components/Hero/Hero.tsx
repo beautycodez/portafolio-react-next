@@ -20,7 +20,7 @@ const Hero = () => {
         />
         <div className="flex flex-col justify-between pr-8">
           <h1 className="text-2xl text-slate-800 text-center">
-            "The best personalized websites to meat and overcome your goals"
+            The best personalized websites to meat and overcome your goals
           </h1>
           <Button onClick={() => {setModal(true)}} className="text-red-600 bottom-3 w-fit mx-auto mb-3" variant="contained">
             Know Me Better
