@@ -6,7 +6,7 @@ const AboutMe = () => {
     <>
       <Header />
       <Navigation />
-      <div className="text-black">This is the About Me</div>
+      <div className="text-black">This is the About Me Angello Antonio ruiz Landauro</div>
     </>
   );
 };

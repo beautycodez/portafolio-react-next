@@ -28,7 +28,7 @@ const Hero = () => {
         </div>
       </section>
       <Modal modal={modal} setModal={setModal}>
-        <p>My name is Angello and I am a software developer very passionate for technology. My purpose is to bring the best experience to the user and help companies to achieve their goals with amazing designs.</p>
+        <p>My name is Angello Ruiz and I am a software developer very passionate for technology. My purpose is to bring the best experience to the user and help companies to achieve their goals with amazing designs.</p>
       </Modal>
     </div>
   );
