@@ -49,7 +49,7 @@ export function NavUlLinks(props: { classtype: string }) {
   return (
     <ul className={`space-x-10 px-5 py-6 sm:flex ${props.classtype} flex-row`}>
       {navLinks.map((link) => (
-        <li className="flex text-white hover:text-xl ml-0" key={link.id}>
+        <li className="flex text-center text-white text-sm hover:text-xl ml-0" key={link.id}>
           <Link className="block m-0 p.0" href={`${link.path}`}>
             {link.linkName}
           </Link>

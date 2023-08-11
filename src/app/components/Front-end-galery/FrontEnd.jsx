@@ -8,7 +8,13 @@ import Link from "next/link";
 export function FrontEndExample({ img, title }) {
   return (
     <div>
-      <Image src={img} alt={title} width={250} height={250} />
+      <Image
+        src={img}
+        alt={title}
+        width={250}
+        height={250}
+        className="md:w-44 mx-auto"
+      />
     </div>
   );
 }
@@ -58,7 +64,6 @@ const FrontEnd = () => {
   ];
 
   function handleClickInfo(infoWeb) {
-
     const info = infoWeb;
     console.log(infoWeb);
     setInfo(info);
@@ -68,17 +73,29 @@ const FrontEnd = () => {
     <div>
       <div className="bg-black py-10 px-10">
         <h1 className="text-white text-3xl text-center ">Front-end Projects</h1>
-        <div className="flex">
+        <div className="flex flex-col md:flex-row 
+          flex-wrap gap-2 lg:flex-row">
           {websites.map((web) => (
-            <section className="block w-fit mx-auto my-5" key={web.id}>
-              <h1 className="text-white text-2xl">{web.title}</h1>
+            <section
+              className="block w-44 mx-auto my-5 text-center"
+              key={web.id}
+            >
+              <h1 className="text-white text-2xl h-16 ">{web.title}</h1>
               <FrontEndExample title={web.title} img={web.img} />
-              <Button onClick={() => {handleClickInfo(web.infoWeb)}}>Info</Button>
-              <Button variant="contained">
-                <Link href={web.url} target="_blank">
-                  Go to the Website
-                </Link>
-              </Button>
+              <div className="flex flex-col">
+                <Button
+                  onClick={() => {
+                    handleClickInfo(web.infoWeb);
+                  }}
+                >
+                  Info
+                </Button>
+                <Button variant="contained">
+                  <Link href={web.url} target="_blank">
+                    Go to the Website
+                  </Link>
+                </Button>
+              </div>
             </section>
           ))}
         </div>
