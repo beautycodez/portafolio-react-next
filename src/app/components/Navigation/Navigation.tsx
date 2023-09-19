@@ -40,16 +40,16 @@ export function HamburgerMenu() {
 
 export function NavUlLinks(props: { classtype: string }) {
   let navLinks = [
-    { id: 1, linkName: "Home", path: "/" },
-    { id: 2, linkName: "About Me", path: "./about-me" },
-    { id: 3, linkName: "Work With Me", path: "./work-with-me" },
-    { id: 4, linkName: "Blog", path: "./blog" },
+    { id: 1, linkName: "Home", path: "/" }
   ];
+  // { id: 2, linkName: "About Me", path: "./about-me" },
+  // { id: 3, linkName: "Work With Me", path: "./work-with-me" },
+  // { id: 4, linkName: "Blog", path: "./blog" }
   // "hidden space-x-10 px-5 py-6 h-full sm:flex"
   return (
-    <ul className={`space-x-10 px-5 py-6 sm:flex ${props.classtype} flex-row`}>
+    <ul className={`space-x-10 px-5 pt-10 sm:flex ${props.classtype} flex-row`}>
       {navLinks.map((link) => (
-        <li className="flex text-center text-white text-sm hover:text-xl ml-0" key={link.id}>
+        <li className="flex text-center text-white text-xl hover:text-2xl ml-0" key={link.id}>
           <Link className="block m-0 p.0" href={`${link.path}`}>
             {link.linkName}
           </Link>
@@ -61,7 +61,7 @@ export function NavUlLinks(props: { classtype: string }) {
 
 const Navigation = () => {
   return (
-    <nav className="w-full bg-slate-900 h-25">
+    <nav className="w-full bg-slate-900 h-28">
       <HamburgerMenu />
     </nav>
   );

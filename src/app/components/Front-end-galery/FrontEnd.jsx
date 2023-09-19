@@ -23,7 +23,7 @@ export function InfoTech({ info }) {
   return (
     <div className="bg-blue-950 py-5 w-full">
       <div className="mx-auto text-2xl bg-black text-white w-fit p-2 rounded-lg hover:bg-white hover:text-black">
-        {info}
+        <p>{info}</p>
       </div>
     </div>
   );
@@ -63,7 +63,7 @@ const FrontEnd = () => {
     },
   ];
 
-  function handleClickInfo(infoWeb) {
+  function handleClickInfo(infoWeb, titleWeb) {
     const info = infoWeb;
     console.log(infoWeb);
     setInfo(info);
