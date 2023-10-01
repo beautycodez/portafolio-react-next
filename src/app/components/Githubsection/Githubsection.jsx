@@ -15,16 +15,16 @@ const Githubsection = () => {
         </section>
         <section className='git-sections'>
             <h1>Front-end Projects</h1>
-            <a href="">
+            <a href="https://github.com/beautycodez/wdd230">
                 <AiFillGithub className="AiFillGithub"/>
             </a>
         </section>
-        <section className='git-sections'>
+        {/* <section className='git-sections'>
             <h1>C#</h1>
             <a href="">
                 <AiFillGithub className="AiFillGithub"/>
             </a>
-        </section>
+        </section> */}
       </div>
     </div>
   )
