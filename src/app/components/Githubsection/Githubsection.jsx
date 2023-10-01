@@ -9,7 +9,7 @@ const Githubsection = () => {
       <div className=''>
         <section className='git-sections'>
             <h1>Python</h1>
-            <a href="">
+            <a href="https://github.com/beautycodez/python_projects" target='_blank'>
                 <AiFillGithub className="AiFillGithub" />
             </a>
         </section>
