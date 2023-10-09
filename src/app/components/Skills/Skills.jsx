@@ -4,7 +4,7 @@ import Rating from '@mui/material/Rating';
 
 const Skills = () => {
   return (
-    <div>
+    <div className='my-20'>
       <table className='mx-auto my-8 border-black border-2'>
         <thead className='bg-yellow-500 text-2xl'>
           <tr>
