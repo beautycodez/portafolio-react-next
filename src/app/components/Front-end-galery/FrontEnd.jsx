@@ -13,7 +13,7 @@ export function FrontEndExample({ img, title }) {
         alt={title}
         width={250}
         height={250}
-        className="md:w-44 mx-auto"
+        className="mx-auto aspect-square w-full rounded-xl object-cover"
       />
     </div>
   );
@@ -21,11 +21,13 @@ export function FrontEndExample({ img, title }) {
 
 export function InfoTech({ info }) {
   return (
-    <div className="bg-blue-950 py-5 w-full">
-      <div className="mx-auto text-2xl bg-black text-white w-fit p-2 rounded-lg hover:bg-white hover:text-black">
-        <p>{info}</p>
+    info && (
+      <div className="mt-8 w-full rounded-2xl bg-[#e5f2f0] px-5 py-4 text-center text-[#102a43]">
+        <div className="mx-auto w-fit rounded-lg bg-white px-5 py-3 text-base font-medium shadow-sm sm:text-lg">
+          <p>{info}</p>
+        </div>
       </div>
-    </div>
+    )
   );
 }
 
@@ -63,35 +65,51 @@ const FrontEnd = () => {
     },
   ];
 
-  function handleClickInfo(infoWeb, titleWeb) {
-    const info = infoWeb;
-    console.log(infoWeb);
-    setInfo(info);
+  function handleClickInfo(infoWeb) {
+    setInfo(infoWeb);
   }
 
   return (
-    <div>
-      <div className="bg-black py-10 px-10">
-        <h1 className="text-white text-3xl text-center ">Front-end Projects</h1>
-        <div className="flex flex-col md:flex-row 
-          flex-wrap gap-2 lg:flex-row">
+    <section className="bg-white px-6 py-14 sm:px-8 sm:py-16">
+      <div className="mx-auto max-w-6xl">
+        <p className="mb-2 text-center text-sm font-semibold uppercase tracking-[0.2em] text-[#0f766e]">
+          Selected work
+        </p>
+        <h2 className="mb-9 text-center text-3xl font-semibold tracking-tight text-[#102a43] sm:mb-12 sm:text-4xl">
+          Front-end Projects
+        </h2>
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {websites.map((web) => (
             <section
-              className="block w-44 mx-auto my-5 text-center"
+              className="flex flex-col rounded-2xl bg-[#f3f7f8] p-4 text-center shadow-sm transition-transform hover:-translate-y-1 hover:shadow-lg"
               key={web.id}
             >
-              <h1 className="text-white text-2xl h-16 ">{web.title}</h1>
+              <h3 className="mb-3 flex min-h-14 items-center justify-center text-lg font-semibold text-[#102a43]">
+                {web.title}
+              </h3>
               <FrontEndExample title={web.title} img={web.img} />
-              <div className="flex flex-col">
+              <div className="mt-4 flex flex-col gap-2">
                 <Button
                   onClick={() => {
                     handleClickInfo(web.infoWeb);
                   }}
+                  sx={{
+                    color: "#0f766e",
+                    fontWeight: 600,
+                    "&:hover": { backgroundColor: "rgba(15, 118, 110, 0.08)" },
+                  }}
                 >
                   Info
                 </Button>
-                <Button variant="contained">
-                  <Link href={web.url} target="_blank">
+                <Button
+                  variant="contained"
+                  sx={{
+                    borderRadius: "9999px",
+                    backgroundColor: "#0f766e",
+                    "&:hover": { backgroundColor: "#0b5f59" },
+                  }}
+                >
+                  <Link href={web.url} target="_blank" rel="noreferrer">
                     Go to the Website
                   </Link>
                 </Button>
@@ -101,7 +119,7 @@ const FrontEnd = () => {
         </div>
       </div>
       <InfoTech info={info} />
-    </div>
+    </section>
   );
 };
 

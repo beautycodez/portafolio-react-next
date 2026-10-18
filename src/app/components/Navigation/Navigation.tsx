@@ -3,9 +3,8 @@ import { useState } from "react";
 // import React from "react";
 import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { AiOutlineClose } from "react-icons/ai";
+import { AiFillHome, AiOutlineClose } from "react-icons/ai";
 import { Button } from "../../../lib/mui";
-import { ClassNames } from "@emotion/react";
 
 export function HamburgerMenu() {
   const [isHamburger, setIsNotHamburger] = useState(true);
@@ -23,7 +22,13 @@ export function HamburgerMenu() {
       <Button
         onClick={handleClick}
         variant="contained"
-        className="text-2xl sm:hidden my-auto"
+        aria-label={isHamburger ? "Open navigation menu" : "Close navigation menu"}
+        sx={{
+          display: { xs: "inline-flex", sm: "none" },
+          minWidth: 44,
+          backgroundColor: "#0f766e",
+          "&:hover": { backgroundColor: "#0b5f59" },
+        }}
       >
         {isHamburger ? <GiHamburgerMenu /> : <AiOutlineClose />}
       </Button>
@@ -47,11 +52,21 @@ export function NavUlLinks(props: { classtype: string }) {
   // { id: 4, linkName: "Blog", path: "./blog" }
   // "hidden space-x-10 px-5 py-6 h-full sm:flex"
   return (
-    <ul className={`space-x-10 px-5 pt-10 sm:flex ${props.classtype} flex-row`}>
+    <ul
+      className={`flex-col items-center gap-4 px-5 py-4 sm:flex sm:flex-row sm:gap-8 sm:py-0 ${props.classtype}`}
+    >
       {navLinks.map((link) => (
-        <li className="flex text-center text-white text-xl hover:text-2xl ml-0" key={link.id}>
-          <Link className="block m-0 p.0" href={`${link.path}`}>
-            {link.linkName}
+        <li
+          className="text-center text-base font-medium text-white transition-colors hover:text-[#a8d8d2]"
+          key={link.id}
+        >
+          <Link
+            className="block rounded-md p-2"
+            href={link.path}
+            aria-label={link.linkName}
+            title={link.linkName}
+          >
+            <AiFillHome aria-hidden="true" className="text-2xl" />
           </Link>
         </li>
       ))}
@@ -61,7 +76,7 @@ export function NavUlLinks(props: { classtype: string }) {
 
 const Navigation = () => {
   return (
-    <nav className="w-full bg-slate-900 h-28">
+    <nav className="flex min-h-16 w-full items-center justify-between bg-[#16324f] px-5">
       <HamburgerMenu />
     </nav>
   );

@@ -9,37 +9,56 @@ const Hero = () => {
   const [modal, setModal] = useState(false);
 
   return (
-    // picture of me
-    <div className="bg-white">
-      <div className="container-angello">
-        <div className="yellow-div bg-yellow-500 mx-auto">
-        </div>
-        <Image
+    <section className="bg-[#f3f7f8] px-6 py-12 text-[#102a43] sm:py-16">
+      <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[0.85fr_1.15fr] md:gap-16">
+        <div className="relative mx-auto flex h-[360px] w-full max-w-[360px] items-end justify-center overflow-hidden rounded-3xl bg-[#cce9e5] shadow-xl shadow-[#102a43]/10 sm:h-[420px] md:h-[460px]">
+          <div className="absolute bottom-0 h-2/3 w-4/5 rounded-t-full bg-[#a8d8d2]" />
+          <Image
             src="/images/angello-photo.png"
             width={200}
             height={600}
-            alt="image"
-            className="angello mx-auto"
+            alt="Angello Ruiz"
+            priority
+            className="relative z-10 h-[350px] w-auto object-contain sm:h-[410px] md:h-[450px]"
           />
-      </div>
+        </div>
 
-      <div className="bg-slate-900 py-8">
-        <div className="flex flex-col lg:pr-0 bg-black w-2/3 mx-auto py-8 rounded-xl">
-          <h1 className="text-xl h-64  pt-4 px-4 leading-normal text-white text-center font-extralight">
+        <div className="mx-auto max-w-2xl text-center md:text-left">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#0f766e]">
+            Front-end developer
+          </p>
+          <h2 className="text-3xl font-semibold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
             Design your website according to your needs and make whatever you want for real!
-          </h1>
+          </h2>
+          <p className="mx-auto mt-5 max-w-xl text-base leading-7 text-[#486581] md:mx-0 sm:text-lg">
+            I build thoughtful digital experiences that help businesses connect
+            with their customers.
+          </p>
           <Button
             onClick={() => {
               setModal(true);
             }}
-            className="bottom-3 w-fit mx-auto mb-3 animate-pulse"
             variant="outlined"
+            sx={{
+              mt: 4,
+              borderColor: "#0f766e",
+              borderRadius: "9999px",
+              color: "#0f766e",
+              fontWeight: 600,
+              px: 3,
+              py: 1.25,
+              "&:hover": {
+                borderColor: "#102a43",
+                backgroundColor: "rgba(15, 118, 110, 0.08)",
+              },
+            }}
           >
             Know Me Better
           </Button>
         </div>
+
         <Modal modal={modal} setModal={setModal}>
-          <p className="text-white text-justify">
+          <p className="leading-7 text-[#d9e2ec]">
             My name is Angello Ruiz and I am a software developer very
             passionate for technology. My purpose is to bring the best
             experience to the user and help companies to achieve their goals
@@ -47,7 +66,7 @@ const Hero = () => {
           </p>
         </Modal>
       </div>
-    </div>
+    </section>
   );
 };
 
