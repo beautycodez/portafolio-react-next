@@ -70,6 +70,13 @@ const FrontEnd = () => {
       img: "/images/mis-finanzas.svg",
       infoWeb: "Mis Finanzas: aplicación web para gestionar tus finanzas personales.",
     },
+    {
+      id: 6,
+      title: "WDD 230 Assignment Portal",
+      url: "https://beautycodez.github.io/wdd230/",
+      img: "/images/wdd230-portal.svg",
+      infoWeb: "WDD 230 Assignment Portal: portal de tareas y proyectos de desarrollo web.",
+    },
   ];
 
   function handleClickInfo(infoWeb) {

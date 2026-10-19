@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" fill="none">
+  <defs>
+    <linearGradient id="header" x1="48" y1="51" x2="452" y2="174" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2824E8"/>
+      <stop offset="1" stop-color="#1712B8"/>
+    </linearGradient>
+    <filter id="shadow" x="29" y="25" width="442" height="452" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="8"/>
+      <feGaussianBlur stdDeviation="10"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix values="0 0 0 0 0.063 0 0 0 0 0.102 0 0 0 0 0.173 0 0 0 0.15 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+    <clipPath id="avatar">
+      <circle cx="104" cy="109" r="39"/>
+    </clipPath>
+  </defs>
+  <g filter="url(#shadow)">
+    <rect x="49" y="46" width="402" height="408" rx="24" fill="white"/>
+    <path d="M49 70C49 56.745 59.745 46 73 46h354c13.255 0 24 10.745 24 24v105H49V70Z" fill="url(#header)"/>
+    <circle cx="104" cy="109" r="43" fill="white" fill-opacity=".2"/>
+    <g clip-path="url(#avatar)">
+      <rect x="65" y="70" width="78" height="78" fill="#F4CDB8"/>
+      <path d="M65 121c17-9 29-12 41-12 15 0 27 4 37 12v27H65v-27Z" fill="#F5F5F4"/>
+      <path d="M78 98c0-20 11-30 27-30 17 0 27 12 25 32-7-7-12-13-15-19-8 11-20 17-37 17v-0Z" fill="#292524"/>
+      <path d="M95 110h18v19H95z" fill="#E8AE93"/>
+      <path d="M83 100c0-12 7-21 19-21 13 0 20 9 20 21v12c0 13-9 22-20 22-10 0-19-9-19-22v-12Z" fill="#F1BFA5"/>
+      <path d="M82 103c4-2 7-5 9-9 7 1 16-2 23-7 4 6 8 10 13 12l-2-17-13-12H95L82 80v23Z" fill="#292524"/>
+      <path d="M82 148c3-13 12-20 21-20 11 0 19 7 22 20H82Z" fill="#EF4444"/>
+    </g>
+    <text x="164" y="104" fill="white" font-family="Arial, sans-serif" font-size="17" font-weight="700">ANGELLO A. RUIZ</text>
+    <text x="164" y="129" fill="#DCDCFD" font-family="Arial, sans-serif" font-size="12">Web development student</text>
+    <rect x="164" y="142" width="106" height="4" rx="2" fill="#A5B4FC" fill-opacity=".75"/>
+    <text x="77" y="207" fill="#DC2626" font-family="Arial, sans-serif" font-size="20" font-style="italic" font-weight="700">WDD 230: Assignment Portal</text>
+    <path d="M77 218h346" stroke="#D1D5DB"/>
+    <g font-family="Arial, sans-serif" font-size="13">
+      <circle cx="86" cy="245" r="3" fill="#334155"/>
+      <text x="99" y="249" fill="#475569">Lesson 02:</text>
+      <text x="170" y="249" fill="#1D4ED8" text-decoration="underline">Design Principles</text>
+      <circle cx="86" cy="272" r="3" fill="#334155"/>
+      <text x="99" y="276" fill="#475569">Lesson 03:</text>
+      <text x="170" y="276" fill="#1D4ED8" text-decoration="underline">Chamber site plan</text>
+      <circle cx="86" cy="299" r="3" fill="#334155"/>
+      <text x="99" y="303" fill="#475569">Lesson 04:</text>
+      <text x="170" y="303" fill="#1D4ED8" text-decoration="underline">Navigation bar</text>
+      <circle cx="86" cy="326" r="3" fill="#334155"/>
+      <text x="99" y="330" fill="#475569">Lesson 05:</text>
+      <text x="170" y="330" fill="#1D4ED8" text-decoration="underline">Chamber homepage</text>
+      <circle cx="86" cy="353" r="3" fill="#334155"/>
+      <text x="99" y="357" fill="#475569">Lesson 06:</text>
+      <text x="170" y="357" fill="#1D4ED8" text-decoration="underline">Wind chill with JavaScript</text>
+      <circle cx="86" cy="380" r="3" fill="#334155"/>
+      <text x="99" y="384" fill="#475569">Lesson 07:</text>
+      <text x="170" y="384" fill="#1D4ED8" text-decoration="underline">Lazyloading</text>
+    </g>
+    <path d="M49 414h402v16c0 13.255-10.745 24-24 24H73c-13.255 0-24-10.745-24-24v-16Z" fill="url(#header)"/>
+    <text x="250" y="440" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="600">WDD 230 · WEB FRONT-END DEVELOPMENT</text>
+  </g>
+</svg>
