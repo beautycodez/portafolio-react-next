@@ -1,34 +1,76 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portafolio de Angello Ruiz
 
-## Getting Started
+Portafolio personal creado con Next.js. Incluye una presentación, proyectos
+front-end, habilidades y enlaces a repositorios de GitHub.
 
-First, run the development server:
+## Tecnologías
+
+- Next.js 13 y React 18
+- TypeScript y JavaScript
+- Tailwind CSS 4
+- Material UI y React Icons
+
+## Requisitos
+
+- Node.js 24.x
+- npm
+
+La versión de Node está declarada en `package.json`. Si usas Vercel, selecciona
+también **Node.js 24.x** en la configuración del proyecto.
+
+## Instalación y desarrollo
+
+Instala las dependencias:
+
+```bash
+npm install
+```
+
+Inicia el servidor local:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000). Los cambios en el código
+se reflejan automáticamente mientras el servidor está activo.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Comandos disponibles
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+| Comando | Descripción |
+| --- | --- |
+| `npm run dev` | Inicia Next.js en modo desarrollo. |
+| `npm run lint` | Ejecuta el linter de Next.js. |
+| `npm run build` | Genera la compilación de producción. |
+| `npm run start` | Sirve la compilación de producción; ejecútalo después de `npm run build`. |
 
-## Learn More
+Antes de compilar, detén el servidor de desarrollo para evitar que ambos
+procesos compartan los archivos generados en `.next`.
 
-To learn more about Next.js, take a look at the following resources:
+## Estructura principal
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```text
+src/app/
+├── page.tsx                   # Página principal
+├── about-me/page.tsx          # Página "About me"
+├── blog/page.tsx              # Página del blog
+├── work-with-me/page.tsx      # Página de contacto/servicios
+├── components/                # Componentes de la interfaz
+├── globals.css                # Estilos globales y Tailwind CSS
+└── layout.tsx                 # Layout, fuentes y metadatos
+public/images/                 # Fotografías e imágenes del portafolio
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Para agregar o reemplazar imágenes, guarda los archivos en `public/images/` y
+úsalos desde la interfaz con una ruta como `/images/nombre-del-archivo.png`.
 
-## Deploy on Vercel
+## Despliegue en Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Importa el repositorio de GitHub en Vercel.
+2. Configura la rama de producción, normalmente `main`.
+3. En **Project Settings → General → Node.js Version**, selecciona **24.x**.
+4. Despliega el proyecto. Los siguientes cambios en la rama de producción
+   iniciarán nuevos despliegues si la integración con GitHub está habilitada.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Documentación útil: [Next.js](https://nextjs.org/docs) y
+[despliegue de Next.js en Vercel](https://vercel.com/docs/frameworks/nextjs).

@@ -63,6 +63,13 @@ const FrontEnd = () => {
       img: "/images/naruto-400.png",
       infoWeb: "Chamber of Commerce: Html, CSS, JavaScript",
     },
+    {
+      id: 5,
+      title: "Mis Finanzas",
+      url: "https://finanzas-app-eight-flax.vercel.app/",
+      img: "/images/mis-finanzas.svg",
+      infoWeb: "Mis Finanzas: aplicación web para gestionar tus finanzas personales.",
+    },
   ];
 
   function handleClickInfo(infoWeb) {

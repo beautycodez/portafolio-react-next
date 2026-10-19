@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800" fill="none">
+  <rect width="800" height="800" rx="40" fill="#102A43"/>
+  <rect x="84" y="92" width="632" height="616" rx="28" fill="#F4F8F8"/>
+  <path d="M112 92h576a28 28 0 0 1 28 28v78H84v-78a28 28 0 0 1 28-28Z" fill="#0F766E"/>
+  <circle cx="124" cy="144" r="8" fill="#A8D8D2"/>
+  <circle cx="154" cy="144" r="8" fill="#A8D8D2" opacity=".7"/>
+  <circle cx="184" cy="144" r="8" fill="#A8D8D2" opacity=".45"/>
+  <text x="120" y="260" fill="#102A43" font-family="Arial, sans-serif" font-size="34" font-weight="700">Mis Finanzas</text>
+  <rect x="120" y="294" width="560" height="142" rx="18" fill="#DCEFEB"/>
+  <text x="152" y="340" fill="#486581" font-family="Arial, sans-serif" font-size="18">Controla tus finanzas</text>
+  <rect x="152" y="366" width="184" height="14" rx="7" fill="#0F766E" opacity=".2"/>
+  <rect x="152" y="397" width="104" height="10" rx="5" fill="#0F766E" opacity=".12"/>
+  <rect x="120" y="462" width="560" height="202" rx="18" fill="#FFF"/>
+  <path d="M158 610 238 568l80 20 82-76 78 32 82-91 82 38" stroke="#0F766E" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M158 610 238 568l80 20 82-76 78 32 82-91 82 38v135H158V610Z" fill="#0F766E" opacity=".09"/>
+  <circle cx="560" cy="513" r="10" fill="#A8D8D2"/>
+</svg>
