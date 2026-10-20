@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiFillHome, AiOutlineClose } from "react-icons/ai";
+import { FaGithub } from "react-icons/fa";
 import { Button } from "../../../lib/mui";
 
 export function HamburgerMenu() {
@@ -45,7 +46,14 @@ export function HamburgerMenu() {
 
 export function NavUlLinks(props: { classtype: string }) {
   let navLinks = [
-    { id: 1, linkName: "Home", path: "/" }
+    { id: 1, linkName: "Home", path: "/", icon: <AiFillHome aria-hidden="true" className="text-2xl" /> },
+    {
+      id: 2,
+      linkName: "This repo",
+      path: "https://github.com/beautycodez/portafolio-react-next",
+      icon: <FaGithub aria-hidden="true" className="text-2xl" />,
+      external: true
+    }
   ];
   // { id: 2, linkName: "About Me", path: "./about-me" },
   // { id: 3, linkName: "Work With Me", path: "./work-with-me" },
@@ -61,12 +69,15 @@ export function NavUlLinks(props: { classtype: string }) {
           key={link.id}
         >
           <Link
-            className="block rounded-md p-2"
+            className="flex items-center gap-1 rounded-md p-2"
             href={link.path}
             aria-label={link.linkName}
             title={link.linkName}
+            target={link.external ? "_blank" : undefined}
+            rel={link.external ? "noopener noreferrer" : undefined}
           >
-            <AiFillHome aria-hidden="true" className="text-2xl" />
+            {link.icon}
+            {link.external && <span>This repo</span>}
           </Link>
         </li>
       ))}

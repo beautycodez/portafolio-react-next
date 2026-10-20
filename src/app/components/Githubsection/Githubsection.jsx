@@ -1,10 +1,12 @@
 import React from 'react'
 import { AiFillGithub } from 'react-icons/ai';
+import { Reveal } from '../Reveal';
 
 
 const Githubsection = () => {
   return (
     <section className="bg-white px-6 py-14 sm:py-16">
+      <Reveal>
       <h2 className="mb-9 text-center text-3xl font-semibold tracking-tight text-[#102a43] sm:mb-12 sm:text-4xl">
         GitHub Repositories
       </h2>
@@ -28,6 +30,7 @@ const Githubsection = () => {
             </a>
         </section> */}
       </div>
+      </Reveal>
     </section>
   )
 }

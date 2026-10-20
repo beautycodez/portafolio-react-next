@@ -4,12 +4,14 @@ import Image from "next/image";
 import { Button } from "@mui/material";
 import { useState } from "react";
 import Modal from "../Modal/Modal";
+import { Reveal } from "../Reveal";
 
 const Hero = () => {
   const [modal, setModal] = useState(false);
 
   return (
     <section className="bg-[#f3f7f8] px-6 py-12 text-[#102a43] sm:py-16">
+      <Reveal>
       <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[0.85fr_1.15fr] md:gap-16">
         <div className="relative mx-auto flex h-[360px] w-full max-w-[360px] items-end justify-center overflow-hidden rounded-3xl bg-[#cce9e5] shadow-xl shadow-[#102a43]/10 sm:h-[420px] md:h-[460px]">
           <div className="absolute bottom-0 h-2/3 w-4/5 rounded-t-full bg-[#a8d8d2]" />
@@ -66,6 +68,7 @@ const Hero = () => {
           </p>
         </Modal>
       </div>
+      </Reveal>
     </section>
   );
 };

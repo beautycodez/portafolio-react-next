@@ -1,9 +1,11 @@
 import React from 'react'
 import Rating from '@mui/material/Rating';
+import { Reveal } from '../Reveal';
 
 const Skills = () => {
   return (
     <section className="bg-[#f3f7f8] px-5 py-14 sm:py-16">
+      <Reveal>
       <h2 className="mb-8 text-center text-3xl font-semibold tracking-tight text-[#102a43] sm:text-4xl">
         Skills
       </h2>
@@ -54,6 +56,7 @@ const Skills = () => {
           </tbody>
         </table>
       </div>
+      </Reveal>
     </section>
   )
 }
